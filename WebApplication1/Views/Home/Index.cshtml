@@ -1,0 +1,108 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    p, h1 {
+        text-align: left;
+        color: white;
+    }
+    h2{
+        color:orange;
+     }
+    body {
+        background: Teal;
+    }
+    .double-border-button {
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px 20px;
+        padding: 10px 30px;
+        position: relative;
+        border: 2px solid lightblue;
+        color: lightblue;
+        font-family: 'Arial', sans-serif;
+        transition: .4s;
+    }
+        .double-border-button:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            border: 2px solid rgba(0, 0, 0, 0);
+            transition: .4s;
+            color: lightblue;
+        }
+        .double-border-button:hover:after {
+            border-color: lightblue;
+            width: calc(100% - 10px);
+            color: lightblue;
+            height: calc(100% + 10px);
+        }
+         .image2{
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        text-align: left;
+        
+    }
+         table, th, td {
+        color: white;
+       /* border: 1px solid black;
+        border-collapse: collapse;*/
+        margin: auto;
+       
+        
+    }
+        #car{
+        display: flex;
+        text-align: left;
+    }
+</style>
+<h1>CarService</h1>
+
+<p>
+    Tere tulemast meie autoremontide töökoda.
+    Ma tahan teatada , et oleme nüüd avatud ja ootame uusi klienti.
+</p>
+<a class="double-border-button" asp-area="" asp-controller="Tellimus" asp-action="Create">Telli teenust</a>
+<a class="double-border-button" asp-area="" asp-controller="Teenus" asp-action="Index">Teenused</a>
+<br />
+<img src="pilt/auto1.jpg" alt="123" class="image">
+<br />
+<h2>
+    Teenused ja Hinnad
+</h2>
+<br />
+<br />
+<div id="car">
+    <img src="pilt/remont.jpeg" alt="123" class="image2">
+    <table>
+        <tr>
+            <th>Teenused</th>
+            <th>Hinnad</th>
+        </tr>
+        <tr>
+            <td>Rolli joondamine </td>
+            <td>35€</td>
+        </tr>
+        <tr>
+            <td>Jahutussüsteemi remont </td>
+            <td>80€</td>
+        </tr>
+        <tr>
+            <td>Uue vedrustuse paigaldamine </td>
+            <td>  120€</td>
+        </tr>
+    </table>
+</div>
+<br />
+
+
+
